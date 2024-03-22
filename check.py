@@ -11,8 +11,8 @@ driver = webdriver.Chrome(options=chrome_options)
 driver.get('https://www.facebook.com')
 driver.maximize_window()
 
-login = '+380951555067'
-password = 'Zxcvbbh1001'
+login = 'myligin'
+password = 'mypassword'
 posttext = 'Детейлинг по ОООООЧЕНЬ заманчивым ценам (полировка от 500 зл), забрать можно будет в тот же день, запись по телефону +48575802988 (вайбер, телеграм)'
 links = ['https://www.facebook.com/groups/3128380087479243',
          'https://www.facebook.com/groups/262170162611121/',
