@@ -18,7 +18,7 @@ incorrectpassword = ''
 checkcorrectloginelement = 
 checkincorrectloginelement =
 
-
+try to create massive [corlig, incorlog; corpas, incorpass]
 
 def login ():
     inputlogin = driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/div/div/div/div[2]/div/div[1]/form/div[1]/div[1]/input')
