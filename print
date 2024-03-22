@@ -15,39 +15,25 @@ login = ''
 incorrectlogin = ''
 password = ''
 incorrectpassword = ''
-checkloginelement = 
-posttext = 'Детейлинг по ОООООЧЕНЬ заманчивым ценам (полировка от 500 зл), забрать можно будет в тот же день, запись по телефону +48575802988 (вайбер, телеграм)'
+checkcorrectloginelement = 
+checkincorrectloginelement =
 
 
-def createpost():
-    buttonaddpost = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div[2]/div/div/div[4]/div/div[2]/div/div/div/div[1]/div/div/div/div[1]/div/div[1]/span')
-    buttonaddpost.click()
-    time.sleep(10)
-    inputposttext = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div/div[4]/div/div/div[1]/div/div[2]/div/div/div/div/div[1]/form/div/div[1]/div/div/div[1]/div/div[2]/div[1]/div[1]/div[1]/div[1]/div/div/div/div/div[2]/div/div/div/div')
-    inputposttext.send_keys(posttext)
-    buttonpost = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div/div[4]/div/div/div[1]/div/div[2]/div/div/div/div/div[1]/form/div/div[1]/div/div/div[1]/div/div[3]/div[3]/div/div/div')
-    buttonpost.click()
-    time.sleep(15)
+
+def login ():
+    inputlogin = driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/div/div/div/div[2]/div/div[1]/form/div[1]/div[1]/input')
+		inputlogin.send_keys(login)
+		inputpassword = driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/div/div/div/div[2]/div/div[1]/form/div[1]/div[2]/div/input')
+		inputpassword.send_keys(password)
+		buttonlogin = driver.find_element(By.XPATH,'/html/body/div[1]/div[1]/div[1]/div/div/div/div[2]/div/div[1]/form/div[2]/button')
+		buttonlogin.click()
+		return ... checkelement
+if checkelement = checkcorrectloginelement 
+print or return to the terminal 
+else if checkelement = checkincorrectloginelement
+
+else mistake
 
 time.sleep(5)
-
-buttonallow = driver.find_element(By.XPATH,'/html/body/div[3]/div[2]/div/div/div/div/div[4]/button[2]')
-buttonallow.click()
-
-time.sleep(5)
-
-inputlogin = driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/div/div/div/div[2]/div/div[1]/form/div[1]/div[1]/input')
-inputlogin.send_keys(login)
-inputpassword = driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/div/div/div/div[2]/div/div[1]/form/div[1]/div[2]/div/input')
-inputpassword.send_keys(password)
-buttonlogin = driver.find_element(By.XPATH,'/html/body/div[1]/div[1]/div[1]/div/div/div/div[2]/div/div[1]/form/div[2]/button')
-buttonlogin.click()
-
-time.sleep(10)
-
-for i, golink in enumerate(links, start=1): 
-    driver.get(golink)
-    time.sleep(10)
-    createpost()
 
 driver.quit()
